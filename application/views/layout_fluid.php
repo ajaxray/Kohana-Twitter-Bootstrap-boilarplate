@@ -43,9 +43,7 @@
             <div class="nav-collapse">
                 <ul class="nav">
                     <li class="active"><a href="#">Home</a></li>
-                    <li>
-                        <a href="<?php echo URL::site('welcome/about') ?>">About</a>
-                    </li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -53,12 +51,24 @@
         </div>
     </div>
 </div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span3">
+            <?php echo $sidebar ?>
+        </div>
+        <div class="span9">
+            <?php echo Message::display(); //display flash_message ?>
+            <?php echo $content ?>
+        </div>
+    </div>
+    <hr>
 
-<div class="container">
-    <?php echo Message::display(); //display flash_message ?>
-    <?php echo $content ?>
+    <footer>
+        <p>&copy; Company 2012</p>
+    </footer>
+
 </div>
-<!-- /container -->
+<!--/.fluid-container-->
 
 <!-- Load Javascripts -->
 <script type="text/javascript">var BASEURL = "<?php echo URL::base() ?>";</script>

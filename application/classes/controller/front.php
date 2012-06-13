@@ -131,14 +131,19 @@ class Controller_Front extends Controller_Template
     }
 
 
+    /**
+     * @param $total
+     * @return Pagination
+     */
     protected function _getPagination($total)
     {
         if($total instanceof ORM){
             $model = $total;
             $pagination = $this->_getPagination($model->reset(FALSE)->count_all());
 
-            $model->offset($pagination->offset);
-            $model->limit($pagination->items_per_page);
+            // @Todo: make work with current pagination version
+            //$model->offset($pagination->get(offset);
+            //$model->limit($pagination->items_per_page);
 
             return $pagination;
         }
