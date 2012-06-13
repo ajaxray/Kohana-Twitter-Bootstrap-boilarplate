@@ -1,7 +1,7 @@
 /application/logs/
 /application/cache/
 
-/.htaccess$
+/.htaccess
 /application/bootstrap.php
 
 /nbproject/
